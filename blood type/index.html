@@ -1,0 +1,57 @@
+<!-- HTML -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Group Compatibility Checker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://cdn-icons-png.flaticon.com/512/3571/3571559.png" alt="Blood Drop">
+            <h1>Blood Group Compatibility Checker</h1>
+            <p>Find compatible blood donors quickly and easily</p>
+        </div>
+
+        <form id="blood-form">
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" placeholder="Enter your full name">
+
+            <label for="father-name">Father's Name:</label>
+            <input type="text" id="father-name" placeholder="Enter your father's name">
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob">
+
+            <label for="blood-group">Blood Group:</label>
+            <select id="blood-group">
+                <option value="">Select Blood Group</option>
+                <option value="O-">O-</option>
+                <option value="O+">O+</option>
+                <option value="B-">B-</option>
+                <option value="B+">B+</option>
+                <option value="A-">A-</option>
+                <option value="A+">A+</option>
+                <option value="AB-">AB-</option>
+                <option value="AB+">AB+</option>
+            </select>
+
+            <button type="button" id="check-btn">Check Compatibility</button>
+        </form>
+
+        <div class="results" id="results" style="display: none;">
+            <h2>Results:</h2>
+            <p><strong>Name:</strong> <span id="result-name"></span></p>
+            <p><strong>Father's Name:</strong> <span id="result-father"></span></p>
+            <p><strong>Date of Birth:</strong> <span id="result-dob"></span></p>
+            <p><strong>Blood Group:</strong> <span id="result-blood-group"></span></p>
+            <h3>Compatible Blood Donors:</h3>
+            <div class="compatible-donors" id="compatible-donors"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
